@@ -1,0 +1,41 @@
+<div class="container-interface">
+
+  <div class="upper-data">
+    <img class="weather" src="assets/hot.jpeg" *ngIf="14 > 15">
+    <img class="weather" src="assets/cold.jpeg" *ngIf="14 <= 15">
+
+    <div class="weather-data relative z-10 w-[100%] h-[100%] bg-darkBg flex flex-col items-center justify-center">
+      <div class="location1 text-[1.4em] text-white">
+        <p>Point Reyes Station</p>
+        <p id="second-half"></p>
+        <hr>
+      </div>
+  
+      <div class="temperature text-[4em] font-[900] p-2 text-center text-white">
+        <img src="assets/sunny.png" class="pic-sunny absolute left-1 w-12 h-12">
+        <p id="hist-high"></p>
+        <p class="p-5">{{ 14.40 | number: '1.0-0'}}&deg;C</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="lower-data flex flex-col p-[1em] relative overflow-hidden w-[100%] h-[50%] rounded-b-[1em]">
+    <div class="weather-info-label text-white ">
+      More Information
+    </div>
+    <div class="weather-info-container flex flex-row flex-wrap flex-1 bg-darkBg rounded-b-[1em] mt-[1em]">
+
+      <div class="weather-info-block w-[50%] flex flex-row" *ngFor="let weather of weatherDetails">
+        <div class="weather-info-block-label w-[50%] flex flex-col items-center justify-center">
+          <img [src]="weather.icon" alt="" class="w-[3em]">
+          <span class="text-white text-[0.8em]">{{ weather.label }}</span>
+        </div>
+        <div class="weather-info-block-value w-[50%] flex justify-start items-center text-white">
+          {{ weather.value }}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
