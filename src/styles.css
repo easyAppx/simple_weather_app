@@ -32,7 +32,7 @@
   --White: #FFFFFF;
 
   /* shadows */
-  --light_shadow: 8px 10px 6px rgba(0, 0, 0, 0.1);
+  --light_shadow: 10px 10px 6px rgba(0, 0, 0, 0.1);
   --dark_shadow: 8px 10px 6px rgba(143, 133, 133, 0.1);
 }
 
