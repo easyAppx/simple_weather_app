@@ -22,8 +22,8 @@ export class InterfaceComponent implements OnInit {
       { icon: 'assets/pressure.png', label: 'pressure', value: this.weatherData?.main.pressure + 'mb' },
       { icon: 'assets/clouds.png', label: 'clouds', value: this.weatherData?.clouds.all + '%' },
       { icon: 'assets/wind.png', label: 'wind', value: Math.floor(this.weatherData?.wind.speed || 0) + 'km/h' },
-      { label: 'Sunrise', value: this.getFormattedTime(this.weatherData?.sys.sunrise ?? 0)},
-      { label: 'Sunrise', value: this.getFormattedTime(this.weatherData?.sys.sunset ?? 0)},
+      { icon: 'assets/sunrise.png', label: 'Sunrise', value: this.getFormattedTime(this.weatherData?.sys.sunrise ?? 0)},
+      { icon: 'assets/sunset.png', label: 'Sunset', value: this.getFormattedTime(this.weatherData?.sys.sunset ?? 0)},
     ];
   }
 
